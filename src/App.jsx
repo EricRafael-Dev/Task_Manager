@@ -38,7 +38,7 @@ function App() {
   }
 
   useEffect(() => {
-    setTasks(JSON.parse(localStorage.getItem("tasks")));
+    (JSON.parse(localStorage.getItem("tasks")) ? setTasks(JSON.parse(localStorage.getItem("tasks"))) : []);
   }, []);
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
